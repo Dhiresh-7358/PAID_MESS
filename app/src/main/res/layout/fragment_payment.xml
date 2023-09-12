@@ -1,0 +1,208 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black"
+    tools:context="fragment.PaymentFragment">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="45dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30sp"
+        android:contentDescription="@string/back_button"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/outfit_regular"
+        android:text="@string/total_bill"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+        app:layout_constraintStart_toEndOf="@id/back_arrow"
+        app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+    <ImageView
+        android:id="@+id/rupees_sym"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/rupee_white"
+        android:contentDescription="@string/rupees_symbol"
+        app:layout_constraintBottom_toBottomOf="@id/total"
+        app:layout_constraintStart_toEndOf="@id/total"
+        app:layout_constraintTop_toTopOf="@id/total" />
+
+    <TextView
+        android:id="@+id/total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:text="@string/_240"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/total"
+        app:layout_constraintStart_toEndOf="@id/rupees_sym"
+        app:layout_constraintTop_toTopOf="@id/total" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="@color/text_grey"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/back_arrow">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/round1"
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_round_rectangle"
+                android:contentDescription="@string/indicator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/recommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recommended"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/outfit_regular"
+                app:layout_constraintStart_toEndOf="@id/round1"
+                app:layout_constraintTop_toTopOf="@id/round1"
+                app:layout_constraintBottom_toBottomOf="@id/round1"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/payment_rec2"
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_stroke_payment"
+                android:contentDescription="@string/google_pay"
+                app:layout_constraintStart_toStartOf="@id/payment_rec1"
+                app:layout_constraintTop_toBottomOf="@id/divider3"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:layout_width="29dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/google_pay"
+                android:src="@drawable/google_pay_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/payment_rec2"
+                app:layout_constraintEnd_toEndOf="@id/payment_rec2"
+                app:layout_constraintStart_toStartOf="@id/payment_rec2"
+                app:layout_constraintTop_toTopOf="@id/payment_rec2"
+                tools:ignore="ImageContrastCheck" />
+
+
+            <TextView
+                android:id="@+id/google_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/paymt"
+                android:textColor="#616161"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/payment_rec2"
+                app:layout_constraintStart_toEndOf="@id/payment_rec2"
+                app:layout_constraintTop_toTopOf="@id/payment_rec2" />
+
+            <ImageView
+                android:id="@+id/arrow_google"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="40dp"
+                android:contentDescription="@string/forward_button"
+                android:rotation="180"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="@+id/payment_rec2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/payment_rec2"
+                tools:ignore="ImageContrastCheck" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/google_pay"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@id/payment_rec1"/>
+
+            <ImageView
+                android:id="@+id/payment_rec1"
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_stroke_payment"
+                android:contentDescription="@string/paytm"
+                app:layout_constraintStart_toStartOf="@id/recommended"
+                app:layout_constraintTop_toBottomOf="@id/recommended"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageView
+                android:layout_width="29dp"
+                android:layout_height="20dp"
+                android:src="@drawable/paytm_icon"
+                android:contentDescription="@string/paytm"
+                app:layout_constraintBottom_toBottomOf="@+id/payment_rec1"
+                app:layout_constraintEnd_toEndOf="@id/payment_rec1"
+                app:layout_constraintStart_toStartOf="@id/payment_rec1"
+                app:layout_constraintTop_toTopOf="@id/payment_rec1" />
+
+
+            <TextView
+                android:id="@+id/paytm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/google_pay"
+                android:textColor="#616161"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/payment_rec1"
+                app:layout_constraintStart_toEndOf="@id/payment_rec1"
+                app:layout_constraintTop_toTopOf="@id/payment_rec1" />
+
+            <ImageView
+                android:id="@+id/arrow_paytm"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="40dp"
+                android:contentDescription="@string/forward_button"
+                android:rotation="180"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="@+id/payment_rec1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/payment_rec1"
+                tools:ignore="ImageContrastCheck" />
+
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

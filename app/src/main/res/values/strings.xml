@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">PAID MESS</string>
+    <string name="welcome_image">welcome image</string>
+    <string name="log_in">Log In</string>
+    <string name="please_login_to_continue">Please login to continue.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="LOG_IN">LOG IN</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="back_button">Back button</string>
+    <string name="create_account">Create Account</string>
+    <string name="please_fill_the_input_below_here">Please fill the input below here.</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="Forgot_password">Forgot password?</string>
+    <string name="don_t_worry_we_ll_send_you_reset_instruction">Don’t worry!! we’ll send you reset instruction.</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="back_arrow">Back arrow</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bill_total">Bill total :</string>
+    <string name="rupees_symbol">rupees symbol</string>
+    <string name="_240">240</string>
+    <string name="indicator">indicator</string>
+    <string name="recommended">Recommended</string>
+    <string name="google_pay">google pay</string>
+    <string name="paymt">Paymt</string>
+    <string name="forward_button">forward_button</string>
+    <string name="paytm" />
+    <string name="total_bill">Total bill</string>
+    <string name="your_orders">Your orders</string>
+    <string name="more">More</string>
+<!--    <string name="foodItemName">-->
+<!--        <br>Matar\n</br>-->
+<!--        <br> panner\n</br></string>-->
+</resources>

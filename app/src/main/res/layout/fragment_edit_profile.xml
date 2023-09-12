@@ -1,0 +1,219 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_black"
+    tools:context="fragment.EditProfileFragment">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="45dp"
+        android:layout_height="38dp"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30sp"/>
+
+    <TextView
+        android:id="@+id/account_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/back_arrow"
+        app:layout_constraintStart_toStartOf="@id/back_arrow"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/outfit_regular"
+        android:textSize="32sp"
+        android:text="Account Details"
+        android:textColor="@color/white"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/food_order_card"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/text_grey"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/account_details">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/round1"
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_round_rectangle"
+                android:contentDescription="@string/indicator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit profile"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/outfit_regular"
+                app:layout_constraintStart_toEndOf="@id/round1"
+                app:layout_constraintTop_toTopOf="@id/round1"
+                app:layout_constraintBottom_toBottomOf="@id/round1"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/edit_profile"
+                app:layout_constraintStart_toStartOf="@id/edit_profile"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/outfit_regular"/>
+
+            <EditText
+                android:id="@+id/edit_Text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:fontFamily="@font/outfit_regular"
+                android:hint="Square"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/name"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+            <ImageView
+                android:id="@+id/arrow_paytm"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="30dp"
+                android:contentDescription="@string/forward_button"
+                android:src="@drawable/edit"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_Text_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/edit_Text_name"
+                tools:ignore="ImageContrastCheck" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/name"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@id/edit_Text_name"/>
+
+            <TextView
+                android:id="@+id/mobileNo."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile No."
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/divider1"
+                app:layout_constraintStart_toStartOf="@id/edit_profile"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/outfit_regular"/>
+
+            <EditText
+                android:id="@+id/edit_text_mobileNo."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:fontFamily="@font/outfit_regular"
+                android:hint="90240****"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/mobileNo."
+                app:layout_constraintTop_toBottomOf="@id/mobileNo." />
+            <ImageView
+                android:id="@+id/edit_mobileNo."
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="30dp"
+                android:contentDescription="@string/forward_button"
+                android:src="@drawable/edit"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_text_mobileNo."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/edit_text_mobileNo."
+                tools:ignore="ImageContrastCheck" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/mobileNo."
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@id/edit_text_mobileNo."/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/divider2"
+                app:layout_constraintStart_toStartOf="@id/edit_profile"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/outfit_regular"/>
+
+            <EditText
+                android:id="@+id/edit_text_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:fontFamily="@font/outfit_regular"
+                android:hint="Square.123@gmail.com"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/email"
+                app:layout_constraintTop_toBottomOf="@id/email" />
+            <ImageView
+                android:id="@+id/edot_email"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="30dp"
+                android:contentDescription="@string/forward_button"
+                android:src="@drawable/edit"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_text_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/edit_text_email"
+                tools:ignore="ImageContrastCheck" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/name"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@id/edit_text_email"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "358194398233",
+    "project_id": "paid-mess-be2f6",
+    "storage_bucket": "paid-mess-be2f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358194398233:android:661cd02420936a63e45688",
+        "android_client_info": {
+          "package_name": "com.example.paidmess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358194398233-ff7hc3hbfvgj7hs62ntsspksq8n0jgnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAbI9KgNaebMWC3g8-ZASf4dUYA_zFhWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358194398233-ff7hc3hbfvgj7hs62ntsspksq8n0jgnl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
